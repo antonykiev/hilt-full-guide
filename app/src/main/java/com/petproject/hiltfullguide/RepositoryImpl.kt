@@ -5,6 +5,12 @@ import javax.inject.Inject
 
 class RepositoryImpl @Inject constructor() : Repository {
     override fun execute() {
-        Log.d("Repository", "execute: run")
+        Log.d("Repository", "execute: RepositoryImpl run")
+    }
+}
+
+class RepositoryAnotherImpl @Inject constructor() : Repository {
+    override fun execute() {
+        Log.d("Repository", "execute: RepositoryAnotherImpl run")
     }
 }

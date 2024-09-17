@@ -12,12 +12,14 @@ import androidx.compose.ui.Modifier
 import com.petproject.hiltfullguide.ui.theme.HiltFullGuideTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     @Inject
+    @Named("repositoryAnother")
     lateinit var repository: Repository
 
     override fun onCreate(savedInstanceState: Bundle?) {

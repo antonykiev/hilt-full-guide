@@ -8,6 +8,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import javax.inject.Inject
+import javax.inject.Named
 
 
 @HiltAndroidTest
@@ -16,6 +17,7 @@ class TestFieldInject {
     val hiltRule = HiltAndroidRule(this)
 
     @Inject
+    @Named("repositoryAnother")
     lateinit var repository: Repository
 
     @Test
@@ -23,6 +25,6 @@ class TestFieldInject {
         assertThrows(UninitializedPropertyAccessException::class.java) { repository }
         hiltRule.inject()
         assertNotNull(repository)
-        assertTrue(repository is RepositoryImpl)
+        assertTrue(repository is RepositoryAnotherImpl)
     }
 }
