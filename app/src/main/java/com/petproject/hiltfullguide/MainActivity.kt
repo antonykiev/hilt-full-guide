@@ -1,7 +1,6 @@
 package com.petproject.hiltfullguide
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -35,11 +34,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-
-class Repository @Inject constructor() {
-    fun execute() {
-        Log.d("Repository", "execute: run")
     }
 }
