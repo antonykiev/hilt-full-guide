@@ -4,6 +4,7 @@ import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertThrows
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import javax.inject.Inject
@@ -22,5 +23,6 @@ class TestFieldInject {
         assertThrows(UninitializedPropertyAccessException::class.java) { repository }
         hiltRule.inject()
         assertNotNull(repository)
+        assertTrue(repository is RepositoryImpl)
     }
 }
