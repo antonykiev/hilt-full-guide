@@ -17,9 +17,6 @@ class TestFieldInject {
     @Inject
     lateinit var repository: Repository
 
-//    @Before
-//    fun init() = hiltRule.inject()
-
     @Test
     fun testFoo() {
         assertThrows(UninitializedPropertyAccessException::class.java) { repository }
