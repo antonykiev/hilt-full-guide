@@ -10,13 +10,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.ViewModelProvider
-import com.petproject.hiltfullguide.repository.Repository
 import com.petproject.hiltfullguide.ui.theme.HiltFullGuideTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.withCreationCallback
-import javax.inject.Inject
-import javax.inject.Named
 
 
 @AndroidEntryPoint
